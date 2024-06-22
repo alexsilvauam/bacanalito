@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-################ RESET CSS#################
+/*################ RESET CSS#################*/
 html,
 body,
 div,
@@ -93,7 +93,7 @@ video {
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
+
 
 article,
 aside,
@@ -162,6 +162,69 @@ header li a{
     font-weight: 700;
 }
 
+/* Estilos para la sección "Sobre nosotros" */
+.main_sobre {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Encabezado de la sección */
+.about-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-header h1 {
+  color: #333;
+  font-size: 24px; /* Añadido para un tamaño de fuente más grande */
+  margin-bottom: 20px;
+}
+
+/* Imagen de la sección */
+.about-img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Párrafos de texto */
+.about p {
+  text-align: justify;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Estilos para la sección de visión y misión */
+.vision-mission {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.vision, .mission {
+  flex-basis: 48%;
+  text-align: center;
+}
+
+.vision h2, .mission h2 {
+  color: #4CAF50;
+  font-size: 18px; /* Añadido para un tamaño de fuente más grande */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .vision-mission {
+    flex-direction: column;
+  }
+
+  .vision, .mission {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+}
+
 
 .logo img{
   width: 180px;
@@ -214,10 +277,11 @@ nav a {
 .testimonials,
 .menu,
 .orders,
-.about,
-.contact {
+.about {
+  background-color: #f0f0f0; /* Un gris claro */
+  padding: 20px; /* Añade algo de espacio alrededor del contenido */
+  border-radius: 8px; /* Opcional: bordes redondeados para un aspecto más suave */
   text-align: center;
-  padding: 50px 20px;
 }
 
 .menu-highlights h2,
@@ -225,8 +289,7 @@ nav a {
 .testimonials h2,
 .menu h1,
 .orders h1,
-.about h1,
-.contact h1 {
+.about h1 {
   font-size: 2em;
   margin-bottom: 20px;
 }
@@ -264,17 +327,7 @@ footer {
   max-width: 100%;
   box-sizing: border-box; 
 }
-/* footer .contact-info,
-footer .social-media {
-  margin: 0;
-  padding: 10px;
-}
 
-footer .social-media {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-} */
 
 form {
   display: flex;
@@ -284,26 +337,91 @@ form {
   margin: 0 auto;
 }
 
+
+.orders {
+  background: #fff;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 10px;
+}
+
+.order-banner {
+  width: 200px;
+  display: block;
+  margin: 0 auto 20px; /* Centra la imagen y añade espacio debajo */
+  border-radius: 8px; /* Opcional: añade bordes redondeados */
+}
 input[type="text"],
-input[type="email"],
 select,
-textarea {
+input[type="submit"] {
+  display: block;
+  width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  margin: 10px 0;
   border-radius: 5px;
+  border: 1px solid #ddd;
 }
 
 input[type="submit"] {
-  background-color: #ff5733;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
+  background-color: #e45f07;
+  color: white;
   cursor: pointer;
 }
 
 input[type="submit"]:hover {
-  background-color: #e04e2f;
+  background-color: #d0a108;
+}
+
+.contact {
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.contact h1 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Asegura que padding no aumente el tamaño */
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form .form-submit input[type="submit"] {
+  background-color: #ff5733;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form .form-submit input[type="submit"]:hover {
+  background-color: #45a049;
 }
 .cards {
   width: 350px;
