@@ -214,14 +214,21 @@ header li a{
 }
 
 /* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
-  .vision-mission {
+@media (max-width: 576px) {
+  /* Para pantallas menores a 576px */
+  
+  .row {
     flex-direction: column;
+    margin: 0;
   }
 
-  .vision, .mission {
-    flex-basis: 100%;
+  .col-lg-6, .col-md-12, .col-sm-12 {
+    width: 100%;
     margin-bottom: 20px;
+  }
+
+  .banner h1, .banner p {
+    text-align: center;
   }
 }
 
@@ -423,6 +430,8 @@ input[type="submit"]:hover {
 .contact-form .form-submit input[type="submit"]:hover {
   background-color: #45a049;
 }
+
+
 .cards {
   width: 350px;
   background: #f7f7f7;
@@ -432,5 +441,159 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 .cards img {
   width: 350px;
   border-radius: 22px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');/*################ PRINCIPAL -- MAIN #################*/
+/*################ BANNER #################*/
+
+.banner {
+  height: 620px;
+  background-image: url(./images/pexels-skitterphoto-1105325.jpg);
+  background-size: cover;
+  padding-top: 250px;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; /* Nueva fuente */
+  background-color: #f5f5f5; /* Fondo gris */
+}
+
+.bloque-banner {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  color: #292929;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #292929;
+}
+
+.subtitulo {
+  font-size: 21px;
+  font-weight: 300;
+  margin: 25px 0;
+  color: #292929;
+}
+
+.ver-mas {
+  display: block;
+  padding: 20px 30px;
+  color: inherit;
+  text-transform: uppercase;
+  background: #c15004;
+  font-size: 14px;
+  text-decoration: none;
+  width: 166px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  transition: all 0.3s ease; /* Suaviza la transición */
+}
+
+.ver-mas:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Sombra más suave */
+  border: none; /* Eliminar el borde al pasar el mouse */
+  background-color: #e76f51; /* Cambiar el color al pasar el mouse */
+}
+
+/*################ ARTICULOS #################*/
+.articulos {
+  padding: 20px 0; /* Espaciado superior e inferior */
+}
+
+.articulos > .contenedor::after, .pie-pagina>.contenedor::after {
+  content: ".";
+  font-size: 0;
+  height: 3px;
+  width: 100%;
+  display: block;
+  clear: both;
+}
+
+article {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  text-align: justify;
+  padding: 60px 20px; /* Ajuste de padding */
+  background-color: #ffffff; /* Fondo blanco para contraste */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+  margin: 10px; /* Separación entre artículos */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700; /* Más peso para el título */
+    color: #333; /* Color más oscuro para mejor contraste */
+}
+
+.cita {
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: #555; /* Color más suave */
+}
+
+.texto {
+    font-weight: 300;
+    margin-bottom: 50px;
+    color: #666; /* Color más suave para el texto */
+}
+
+h2:after {
+    content: '.';
+    font-size: 0px;
+    height: 2px;
+    width: 38px;
+    background-color: #c10804;
+    display: block;
+    margin-bottom: 25px;
+}
+
+/* Estilos para la sección seleccionada */
+.section-wrap {
+  background-color: #f8f9fa; /* Fondo claro para la sección */
+  padding: 40px 0; /* Espaciado superior e inferior */
+}
+
+.icono-wrap {
+  background-color: #ffffff; /* Fondo blanco para las tarjetas */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease-in-out; /* Animación suave */
+}
+
+.icono-wrap:hover {
+  transform: translateY(-5px); /* Efecto al pasar el mouse */
+}
+
+.icono-wrap img {
+  border-radius: 10px 0 0 10px; /* Bordes redondeados para la imagen */
+}
+
+.icono-wrap h3 {
+  color: #007bff; /* Color azul para los títulos, ajustable según tu paleta */
+  font-weight: 600; /* Más peso para el título */
+}
+
+.icono-wrap p {
+  color: #666; /* Color gris oscuro para el texto */
+  line-height: 1.6; /* Espaciado de línea para mejorar la legibilidad */
+}
+
+/* Ajustes para el responsive */
+@media (max-width: 768px) {
+  .icono-wrap {
+    flex-direction: column; /* Cambia la dirección en pantallas pequeñas */
+    text-align: center; /* Centra el texto en pantallas pequeñas */
+  }
+
+  .icono-wrap img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    border-radius: 10px 10px 0 0; /* Ajusta los bordes redondeados */
+  }
 }
 
